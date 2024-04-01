@@ -1,0 +1,13 @@
+def fibo2():
+  a,b=0,1
+  print(a)
+  print(b)
+  c=1
+  while(a+b<5):
+    c=a+b
+    print(c)
+    a=b
+    b=c
+  
+
+fibo2()
