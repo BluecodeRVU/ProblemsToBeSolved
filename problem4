@@ -1,0 +1,13 @@
+def fibo1():
+  a,b=0,1
+  print(a)
+  print(b)
+  for i in range(2,10):
+    c=a+b
+    print(c)
+    temp=b
+    b=c
+    a=temp
+  
+
+fibo1()
