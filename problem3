@@ -1,9 +1,5 @@
-def strtodict(strt):
-  result={}
-  i=strt.split(";")
-  for j in i:
-    x,y=j.split("=")
-    result.update({x:y})
-  return result
+def strtodict2(strt):
+  res={i[0]:i[1] for i in (j.split("=") for j in strt.split(";"))}
+  return res
 
-strtodict("a=b;c=d;e=f;g=h")
+strtodict2("a=b;c=d;e=f;g=h")
