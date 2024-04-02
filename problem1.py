@@ -1,11 +1,5 @@
-str="a=b;c=d;e=f;g=h"
-def strtolist(str):
-  remcol=str.split(";")
-  values=[]
-  for i in remcol:
-    key,value=i.split("=")
-    values.append((key.strip(),value.strip()))
+strt="a=b;c=d;e=f;g=h"
+def strtolist3(strt):
+  values=[(key.strip(),value.strip()) for key,value in (i.split("=") for i in (remcol for remcol in strt.split(";")))]
   return values
-
-print(strtolist(str))
-  
+print(strtolist3(strt))
